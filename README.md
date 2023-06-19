@@ -4,8 +4,6 @@ This is a student project from SoftUni.
 
 © SoftUni – about.softuni.bg. Copyrighted document. Unauthorized copy, reproduction or use is not permitted.
 
-Follow us: Page 1 of 10
-My Music App - Python Web Basics Exam
 The app allows a user to browse different albums, including the author, genre, and price. The user can create a
 catalog of albums. Album creators can also edit or delete their posts at any time.
 ## 1. Skeleton
