@@ -54,7 +54,7 @@ ROOT_URLCONF = "MusicApp.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR / 'templates']
+        "DIRS": [BASE_DIR / 'MusicApp' / 'templates']
         ,
         "APP_DIRS": True,
         "OPTIONS": {
@@ -74,16 +74,11 @@ WSGI_APPLICATION = "MusicApp.wsgi.application"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'os.env("DB_NAME")',  # database name
-        'USER': 'os.env("DB_USER")',  # username
-        'PASSWORD': 'os.env("DB_PASSWORD")',  # password
-        'HOST': '127.0.0.1',  # or localhost
-        'PORT': '5432'
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": "db.sqlite3",
     }
 }
-
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
@@ -118,7 +113,7 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 STATICFILES_DIRS = [
-    BASE_DIR / "staticfiles",
+    BASE_DIR / "MusicApp/staticfiles",
 ]
 
 # Default primary key field type

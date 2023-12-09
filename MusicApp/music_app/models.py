@@ -21,6 +21,14 @@ class Profile(models.Model):
         blank=True,
         null=True,
     )
+    image_url = models.URLField(
+        blank=True,
+        null=True,
+        verbose_name="Image URL",
+    )
+
+    def __str__(self):
+        return self.username
 
 
 class Album(models.Model):

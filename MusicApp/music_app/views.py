@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 
-from MusicApp.music_app.forms import ProfileCreateForm, AlbumCreateForm, AlbumEditForm, AlbumDeleteForm, \
-    ProfileDeleteForm
+from MusicApp.music_app.forms import ProfileCreateForm, AlbumCreateForm, AlbumEditForm, AlbumDeleteForm
 from MusicApp.music_app.models import Profile, Album
 
 

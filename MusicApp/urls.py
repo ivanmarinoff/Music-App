@@ -17,8 +17,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from MusicApp import music_app
-
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("MusicApp.music_app.urls")),
