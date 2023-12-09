@@ -23,7 +23,7 @@ class UserModelAdmin(admin.ModelAdmin):
     ordering = ['-username']
 
     def image_tag(self, obj):
-        if obj.profile_picture:
+        if obj.image_url:
             return format_html('<img src="{}" style="max-width:150px; max-height:150px"/>'.format(obj.image_url))
         return None
 

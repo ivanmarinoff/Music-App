@@ -42,17 +42,6 @@ class Album(models.Model):
         HIP_HOP_MUSIC = "Hip Hop Music"
         OTHER = "Other"
 
-
-    # CHOICES = [
-    #     (POP_MUSIC, POP_MUSIC),
-    #     (JAZZ_MUSIC, JAZZ_MUSIC),
-    #     (R_N_B_MUSIC, R_N_B_MUSIC),
-    #     (ROCK_MUSIC, ROCK_MUSIC),
-    #     (COUNTRY_MUSIC, COUNTRY_MUSIC),
-    #     (DANCE_MUSIC, DANCE_MUSIC),
-    #     (HIP_HOP_MUSIC, HIP_HOP_MUSIC),
-    #     (OTHER, OTHER)
-    # ]
     album_name = models.CharField(
         max_length=30,
         validators=[MinLengthValidator(2), username_validator],
