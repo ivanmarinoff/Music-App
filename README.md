@@ -22,6 +22,8 @@ o Email
 o Age
 ▪ Integer field, optional.
 ▪ The age cannot be below 0.
+o Image URL
+▪ URL field, not required.
 • Album
 o Album Name
 ▪ Character field, required.
@@ -48,13 +50,13 @@ Note: the validations will be examined only by the user side, not the admin side
 
 
 ## 3. Routes
-- http://localhost:8000/ - home page
-- http://localhost:8000/album/add/ - add album page
-- http://localhost:8000/album/details/<id>/ - album details page
-- http://localhost:8000/album/edit/<id>/ - edit album page
-- http://localhost:8000/album/delete/<id>/ - delete album page
-- http://localhost:8000/profile/details/ - profile details page
-- http://localhost:8000/profile/delete/ - delete profile page
+- [Home page](https://music-app-n6cm.onrender.com) - home page
+- [Add album](https://music-app-n6cm.onrender.com)/album/add/ - add album page
+- [Album details](https://music-app-n6cm.onrender.com)/album/details/<id>/ - album details page
+- [Edit album](https://music-app-n6cm.onrender.com)/album/edit/<id>/ - edit album page
+- [Delete album](https://music-app-n6cm.onrender.com)/album/delete/<id>/ - delete album page
+- [Profile details](https://music-app-n6cm.onrender.com)/profile/details/ - profile details page
+- [Profile delete](https://music-app-n6cm.onrender.com)/profile/delete/ - delete profile page
 ## 4. Pages
 Base Template
 Template file: "base.html"
@@ -70,7 +72,8 @@ There is no path to this template, and it is NOT accessible via URL:
 
 
 ### Home Page 
-Template files: "home-no-profile.html"; "home-with-profile.html"
+![Home_page](https://github.com/ivanmarinoff/Music-App/assets/107050101/db3b7cb6-9c37-4dec-8b9a-b51fa080adb3)
+
 If there is no profile created yet, the home page shows a form for profile creation. It consists of:
 • A "Username:"
 o There must be a placeholder "Username".
@@ -78,12 +81,12 @@ o There must be a placeholder "Username".
 o There must be a placeholder "Email".
 • An "Age:"
 o There must be a placeholder "Age".
+• An "image_url:"
+o There must be a placeholder "image_url".
 • A button "Enter".
 o When you click on it, if the profile is successfully created, you should be redirected to the same
 page, showing a template for a home page with a profile.
 o Otherwise, the form should show the appropriate validation errors.
-© SoftUni – about.softuni.bg. Copyrighted document. Unauthorized copy, reproduction or use is not permitted.
-
 
 The home with a profile page shows all albums created by the user. When there are no albums created, you can
 only see the paragraph "No Albums in Catalog!":
@@ -93,11 +96,10 @@ If there are a profile and album/s, the page should have the following:
 • A card-box for each album, showing the album's image, name, artist, genre, and price (formatted to the
 second decimal place). There should be a button "Details" in each card-box leading to the album details
 page for the selected album.
-© SoftUni – about.softuni.bg. Copyrighted document. Unauthorized copy, reproduction or use is not permitted.
-
 
 ### Add Album Page
-Template file: "add-album.html"
+![Created_album](https://github.com/ivanmarinoff/Music-App/assets/107050101/e51807da-5ae2-4da1-bd88-64c80491c909)
+
 This page loads an album creation form consisting of:
 • An "Album Name:"
 o There must be a placeholder "Album Name".
@@ -115,11 +117,10 @@ o There must be a placeholder "Price".
 o When you click on it, if the album is successfully created, you should be redirected to the home
 page, showing a template for a home page with a profile.
 o Otherwise, the form should show the appropriate validation errors.
-© SoftUni – about.softuni.bg. Copyrighted document. Unauthorized copy, reproduction or use is not permitted.
 
+### Album Details Page 
+![Album_details](https://github.com/ivanmarinoff/Music-App/assets/107050101/55bcb56a-5ec5-455b-86e3-5047f1474e62)
 
-### Album Details Page
-Template file: "album-details.html"
 This page contains an album's data. It should have the following:
 • The album image
 • The album name
@@ -129,42 +130,38 @@ This page contains an album's data. It should have the following:
 • The description, if there is any entered; otherwise, ignore the line
 • An "Edit" button that leads to the edit album page
 • A "Delete" button that leads to the delete album page
-© SoftUni – about.softuni.bg. Copyrighted document. Unauthorized copy, reproduction or use is not permitted.
-
 
 ### Edit Album Page 
-Template file: "edit-album.html"
+![Edit_album](https://github.com/ivanmarinoff/Music-App/assets/107050101/b59af67c-0a1c-4198-9480-ad3eff71f9b7)
+
 On the page, the form must be filled with the data of the album we want to edit.
 Note: the price should have no limit on the amount of decimal places both when it's shown and when it's edited.
 When you click on the "Edit Album" button:
 • If the album is successfully edited, you should be redirected to the home page, showing a template for a
 home page with a profile.
 • Otherwise, the form should show the appropriate validation errors.
-© SoftUni – about.softuni.bg. Copyrighted document. Unauthorized copy, reproduction or use is not permitted.
 
+### Delete Album Page 
+![Delete_album](https://github.com/ivanmarinoff/Music-App/assets/107050101/0c3c9e9f-689d-4e43-bab3-8938347e51a4)
 
-### Delete Album Page
-Template file: "delete-album.html"
 On the page, the form must be filled with the album's data, and the fields should be disabled. When you click on
 the "Delete" button, the album is deleted from the database, and you should be redirected to the home page,
 showing a template for a home page with a profile.
 The deleted album should be no longer visible in the app.
-© SoftUni – about.softuni.bg. Copyrighted document. Unauthorized copy, reproduction or use is not permitted.
 
+### Profile Details Page 
+![Created_profile](https://github.com/ivanmarinoff/Music-App/assets/107050101/843e7446-e79f-4452-93bb-d88741713996)
 
-### Profile Details Page
-Template file: "profile-details.html"
 This page contains the user's data. It should have the following:
-• The default profile image (as a source link in the HTML code)
+• The user profile image (as a source link in the HTML code)
 • The username
 • The email
 • The age, if it is entered; Otherwise, ignore the line (do not show anything)
 • The total number of albums existing at the moment in this app
 • A "Delete" button that leads to the delete profile page
-© SoftUni – about.softuni.bg. Copyrighted document. Unauthorized copy, reproduction or use is not permitted.
 
+### Delete Profile Page 
+![Delete_profile](https://github.com/ivanmarinoff/Music-App/assets/107050101/655ad7b4-f53c-47eb-8328-c273523c7edf)
 
-### Delete Profile Page
-Template file: "profile-delete.html"
 Deleting a profile should delete the profile info and all albums. After deletion, the user should be redirected to the
 home page with no profile.
