@@ -1,7 +1,18 @@
 from django.shortcuts import render, redirect
-
+from rest_framework import viewsets
 from MusicApp.music_app.forms import ProfileCreateForm, AlbumCreateForm, AlbumEditForm, AlbumDeleteForm
 from MusicApp.music_app.models import Profile, Album
+from MusicApp.music_app.serializers import ProfileSerializer, AlbumSerializer
+
+
+class ProfileViewSet(viewsets.ModelViewSet):
+    queryset = Profile.objects.all()
+    serializer_class = ProfileSerializer
+
+class AlbumViewSet(viewsets.ModelViewSet):
+    queryset = Album.objects.all()
+    serializer_class = AlbumSerializer
+
 
 
 def get_profile():
