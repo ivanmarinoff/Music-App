@@ -1,6 +1,7 @@
 # MusicApp
 This is a student project from SoftUni.
 
+[![Django CI](https://github.com/ivanmarinoff/Music-App/actions/workflows/django.yml/badge.svg)](https://github.com/ivanmarinoff/Music-App/actions/workflows/django.yml)
 
 © SoftUni – about.softuni.bg. Copyrighted document. Unauthorized copy, reproduction or use is not permitted.
 
