@@ -2,15 +2,7 @@ from pathlib import Path
 import os
 from dotenv import load_dotenv
 
-# os.environ.setdefault(
-#   'DJANGO_SETTINGS_MODULE',
-#   'MusicApp.settings'
-# )
-
-# import django
-
-# django.setup()
-
+load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
