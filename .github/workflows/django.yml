@@ -67,6 +67,14 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Install pytest
+      run: |
+        pip install pytest
+
+    - name: Install playwright
+      run: |
+        pip install playwright
+
     - name: Run your tests
       run: |
         pytest
