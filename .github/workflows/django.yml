@@ -55,6 +55,10 @@ jobs:
     needs: deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Test
+      - name: Install dependencies
         run: |
-          python manage.py test
+          pip install pytest-playwright
+
+      - name: Run tests
+        run: |
+          pytest
