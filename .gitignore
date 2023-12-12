@@ -9,7 +9,7 @@ env.bak/
 venv.bak/
 staticfiles
 .vscode
-
+node_modules/*
 
 
 

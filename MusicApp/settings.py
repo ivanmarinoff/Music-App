@@ -2,10 +2,19 @@ from pathlib import Path
 import os
 from dotenv import load_dotenv
 
+# os.environ.setdefault(
+#   'DJANGO_SETTINGS_MODULE',
+#   'MusicApp.settings'
+# )
+
+# import django
+
+# django.setup()
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = "os.env('DJANGO_SECRET_KEY')"
+SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 
 
 DEBUG = True
