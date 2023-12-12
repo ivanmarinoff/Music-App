@@ -69,4 +69,4 @@ jobs:
 
     - name: Run your tests
       run: |
-        python -m pytest --tracing=retain-on-failure
+        pytest
