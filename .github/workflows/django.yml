@@ -51,10 +51,12 @@ jobs:
         with:
           service-id: ${{ secrets.MY_RENDER_SERVICE_ID }}
           api-key: ${{ secrets.MY_RENDER_API_KEY }}
+
+      - name: Wait for deploy
+        run: sleep 60
   
   test:
     needs: deploy
-    if: needs.deploy == 'success'
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
