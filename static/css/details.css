@@ -60,7 +60,7 @@
 }
 
 .actionBtn  {
-    display: flex;
+    display: flow;
     text-align: center;
     left: auto;
     top: auto;

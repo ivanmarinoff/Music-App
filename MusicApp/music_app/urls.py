@@ -1,5 +1,5 @@
 from django.urls import path, include
-from debug_toolbar.toolbar import debug_toolbar_urls
+
 
 from MusicApp.music_app.views import index, add_album, album_details, delete_album, profile_details, \
     profile_delete, edit_album
@@ -17,4 +17,4 @@ urlpatterns = [
                       path('details/', profile_details, name='profile details'),
                       path('delete/', profile_delete, name='profile delete'),
                   ]))
-              ] + debug_toolbar_urls()
+              ]
